@@ -55,7 +55,7 @@ const options = {
 
   startBtn.addEventListener("click", () => {
   timerId = setInterval(() => {
-    deltaTime = userSelectedDates - Date.now();
+    const deltaTime = userSelectedDates - Date.now();
     const time = convertMs(deltaTime);
 
     updateTimer(time);

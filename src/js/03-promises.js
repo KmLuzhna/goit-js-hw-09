@@ -24,7 +24,7 @@ function  addSubmit(event) {
   let delay = Number(firstDelayInput.value);
   let step = Number(delayStepInput.value)
   let amount = Number(amountInput.value)
-  for ( let i = 1; i < amount; i ++) {
+  for ( let i = 1; i <= amount; i ++) {
     if ( i > 1){
       delay += step;
     }

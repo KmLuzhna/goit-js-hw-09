@@ -52,13 +52,15 @@ const options = {
   }
 
   let timerId = null;
-
+  
   startBtn.addEventListener("click", () => {
   timerId = setInterval(() => {
     const deltaTime = userSelectedDates - Date.now();
-    const time = convertMs(deltaTime);
-
-    updateTimer(time);
+    if ( deltaTime > 0) {
+      const time = convertMs(deltaTime);
+      updateTimer(time);
+      startBtn.disabled = true;
+    }
   }, 1000);
 });
 
